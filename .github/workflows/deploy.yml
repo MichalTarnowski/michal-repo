@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # deploys on every push to main
 
 permissions:
   contents: read
@@ -23,7 +23,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '.' # uploads the whole repo root
 
       - id: deployment
         uses: actions/deploy-pages@v4
